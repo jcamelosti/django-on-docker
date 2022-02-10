@@ -32,6 +32,10 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 CSRF_TRUSTED_ORIGINS = [
+    'https://*.localhost:1337',
+    'http://*.localhost:1337',
+    'https://*.localhost',
+    'http://*.localhost',
     'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
     'https://*.127.0.0.1',
@@ -41,6 +45,13 @@ CSRF_TRUSTED_ORIGINS = [
     'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
 ]
+CORS_ORIGIN_ALLOW_ALL = True
+#
+# CORS_ORIGIN_WHITELIST = (
+#
+#        'http://localhost:5000',
+#
+# )
 
 # Application definition
 

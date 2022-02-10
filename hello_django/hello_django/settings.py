@@ -36,6 +36,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://*.localhost:1337',
     'https://*.localhost',
     'http://*.localhost',
+    'http://localhost',
     'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
     'https://*.127.0.0.1',

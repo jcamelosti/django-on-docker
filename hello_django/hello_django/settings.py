@@ -31,7 +31,12 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+    'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
+    'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
+    'https://*.127.0.0.1',
+    'http://*.127.0.0.1',
+]
 
 # Application definition
 

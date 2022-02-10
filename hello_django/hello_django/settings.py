@@ -36,6 +36,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
     'https://*.127.0.0.1',
     'http://*.127.0.0.1',
+    'http://*.172.31.34.98',
+    'https://*.172.31.34.98'
 ]
 
 # Application definition

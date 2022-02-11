@@ -23,7 +23,6 @@ services:
       - ./.env.prod.db
 
   nginx:
-    image: nginx:1.15-alpine
     build: ./nginx
     volumes:
       - static_volume:/home/app/web/staticfiles

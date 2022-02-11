@@ -44,4 +44,4 @@ volumes:
   postgres_data:
   static_volume:
   data/nginx:
-  /data/certbot/conf:
+  data/certbot/conf:

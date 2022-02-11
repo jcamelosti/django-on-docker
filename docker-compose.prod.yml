@@ -43,5 +43,5 @@ services:
 volumes:
   postgres_data:
   static_volume:
-  data/nginx:
-  data/certbot/conf:
+  nginx:
+  certbot:

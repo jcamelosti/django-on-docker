@@ -32,6 +32,10 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 CSRF_TRUSTED_ORIGINS = [
+    'http://*.hipertvdigital.com.br:1337',
+    'http://hipertvdigital.com.br:1337',
+    'http://*.hipertvdigital.com.br',
+    'http://hipertvdigital.com.br',
     'https://*.localhost:1337',
     'http://*.localhost:1337',
     'https://*.localhost',

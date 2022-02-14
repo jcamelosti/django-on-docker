@@ -33,26 +33,26 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-CSRF_TRUSTED_ORIGINS = [
-    'http://*.hipertvdigital.com.br:1337',
-    'http://hipertvdigital.com.br:1337',
-    'http://*.hipertvdigital.com.br',
-    'http://hipertvdigital.com.br',
-    'https://*.localhost:1337',
-    'http://*.localhost:1337',
-    'https://*.localhost',
-    'http://*.localhost',
-    'http://localhost',
-    'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
-    'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
-    'https://*.127.0.0.1',
-    'http://*.127.0.0.1',
-    'http://*.172.31.34.98',
-    'https://*.172.31.34.98'
-    'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
-    'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
-]
-CORS_ORIGIN_ALLOW_ALL = True
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://*.hipertvdigital.com.br:1337',
+#     'http://hipertvdigital.com.br:1337',
+#     'http://*.hipertvdigital.com.br',
+#     'http://hipertvdigital.com.br',
+#     'https://*.localhost:1337',
+#     'http://*.localhost:1337',
+#     'https://*.localhost',
+#     'http://*.localhost',
+#     'http://localhost',
+#     'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
+#     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com',
+#     'https://*.127.0.0.1',
+#     'http://*.127.0.0.1',
+#     'http://*.172.31.34.98',
+#     'https://*.172.31.34.98'
+#     'http://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
+#     'https://*.ec2-18-118-143-85.us-east-2.compute.amazonaws.com:1337',
+# ]
+# CORS_ORIGIN_ALLOW_ALL = True
 #
 # CORS_ORIGIN_WHITELIST = (
 #
@@ -154,14 +154,19 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

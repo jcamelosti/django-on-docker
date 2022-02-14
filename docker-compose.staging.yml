@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build:
-      context: ./hello_django
+      context: ./app
       dockerfile: Dockerfile.prod
     command: gunicorn hello_django.wsgi:application --bind 0.0.0.0:8000
     volumes:
@@ -26,8 +26,8 @@ services:
     build: nginx
     restart: always
     ports:
-      - "443:443"
-      - "80:80"
+      - 443:443
+      - 80:80
     volumes:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles
